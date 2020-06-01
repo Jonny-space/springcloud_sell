@@ -1,0 +1,13 @@
+server:
+  port: 20233
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:20230/eureka/
+spring:
+  profiles:
+    active: dev
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java

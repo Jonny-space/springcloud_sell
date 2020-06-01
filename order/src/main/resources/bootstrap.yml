@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:20230/eureka/
+spring:
+  cloud:
+    config:
+      uri: http://localhost:20233
+  application:
+    name: order-provider
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+  profiles:
+    active: dev

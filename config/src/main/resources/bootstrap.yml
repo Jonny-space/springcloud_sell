@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Jonny-space/config-repo
+          username: m13830711129_1@163.com
+          password: Fengfeng0525
+          default-label: master
