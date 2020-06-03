@@ -1,11 +1,11 @@
 package com.springcloud.order.service.impl;
 
-import com.baomidou.mybatisplus.mapper.Condition;
-import com.baomidou.mybatisplus.mapper.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.springcloud.order.common.entries.OrderDetail;
 import com.springcloud.order.mapper.OrderDetailMapper;
 import com.springcloud.order.service.OrderDetailService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +26,7 @@ public class OrderDetailServiceImpl extends ServiceImpl<OrderDetailMapper, Order
 
     @Override
     public List<OrderDetail> getAll() {
-        Wrapper<OrderDetail> wrapper = new Condition();
+        Wrapper<OrderDetail> wrapper = new QueryWrapper<>(new OrderDetail());
         return mapper.selectList(wrapper);
     }
 }

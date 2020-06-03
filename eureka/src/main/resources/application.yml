@@ -10,8 +10,6 @@ eureka:
     enable-self-preservation: false
 
 spring:
-  application:
-    name: eureka
   devtools:
     restart:
       enabled: true

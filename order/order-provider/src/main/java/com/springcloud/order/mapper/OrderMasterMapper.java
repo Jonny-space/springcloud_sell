@@ -1,6 +1,6 @@
 package com.springcloud.order.mapper;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.springcloud.order.common.entries.OrderMaster;
 
 /**

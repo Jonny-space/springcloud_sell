@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: order-consumer
+logging:
+  file: logs/out.log

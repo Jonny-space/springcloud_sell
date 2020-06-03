@@ -11,3 +11,8 @@ spring:
     restart:
       enabled: true
       additional-paths: src/main/java
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

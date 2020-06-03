@@ -1,2 +1,14 @@
-server:
-  port: 20231
+
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  global-config:
+    db-config:
+      id-type: id_worker
+  mapper-locations: classpath:com/springcloud/order/mapper/*.xml
+  type-aliases-package: com.springcloud.order.common.entries
+spring:
+  devtools:
+    add-properties: false

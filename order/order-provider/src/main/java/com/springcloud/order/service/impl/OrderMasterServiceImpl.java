@@ -1,10 +1,10 @@
 package com.springcloud.order.service.impl;
 
-import com.baomidou.mybatisplus.mapper.Condition;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.springcloud.order.common.entries.OrderMaster;
 import com.springcloud.order.mapper.OrderMasterMapper;
 import com.springcloud.order.service.OrderMasterService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +26,6 @@ public class OrderMasterServiceImpl extends ServiceImpl<OrderMasterMapper, Order
 
     @Override
     public List<OrderMaster> getAll() {
-        return masterMapper.selectList(new Condition());
+        return masterMapper.selectList(new QueryWrapper<>(new OrderMaster()));
     }
 }

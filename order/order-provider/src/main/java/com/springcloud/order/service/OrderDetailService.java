@@ -1,7 +1,7 @@
 package com.springcloud.order.service;
 
 import com.springcloud.order.common.entries.OrderDetail;
-import com.baomidou.mybatisplus.service.IService;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
 
