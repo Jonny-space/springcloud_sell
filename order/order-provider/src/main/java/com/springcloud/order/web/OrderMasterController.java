@@ -1,6 +1,7 @@
 package com.springcloud.order.web;
 
 
+import com.springcloud.common.result.BaseResult;
 import com.springcloud.order.common.entries.OrderDetail;
 import com.springcloud.order.common.entries.OrderMaster;
 import com.springcloud.order.common.service.OrderMasterInterface;

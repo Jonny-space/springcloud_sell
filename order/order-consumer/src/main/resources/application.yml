@@ -19,7 +19,7 @@ management:
     web:
       exposure:
         include: "*"
-#feign:
-#  hystrix:
-#    enabled: true
+feign:
+  hystrix:
+    enabled: true
 #debug: true

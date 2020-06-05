@@ -1,8 +1,9 @@
 package com.springcloud.order.common.entries;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.alibaba.fastjson.annotation.JSONField;
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.baomidou.mybatisplus.annotation.*;
+import com.springcloud.common.enums.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -10,6 +11,8 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+
+
 
 /**
  * <p>
@@ -27,8 +30,8 @@ public class OrderMaster implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId("order_id")
-    private String orderId;
+    @TableId(value = "order_id",type = IdType.ID_WORKER)
+    private long orderId;
     /**
      * ä¹°å®¶åå­—
      */
@@ -58,21 +61,23 @@ public class OrderMaster implements Serializable {
      * è®¢å•çŠ¶æ€, é»˜è®¤ä¸ºæ–°ä¸‹å•
      */
     @TableField("order_status")
-    private Integer orderStatus;
+    @JSONField(serialzeFeatures= SerializerFeature.WriteEnumUsingToString)
+    private OrderStatusEnums orderStatus = OrderStatusEnums.NEW;
     /**
      * æ”¯ä»˜çŠ¶æ€, é»˜è®¤æœªæ”¯ä»˜
      */
     @TableField("pay_status")
-    private Integer payStatus;
+    @JSONField(serialzeFeatures= SerializerFeature.WriteEnumUsingToString)
+    private PayStatusEnum payStatus = PayStatusEnum.WAIT;
     /**
      * åˆ›å»ºæ—¶é—´
      */
-    @TableField("create_time")
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
     private Date createTime;
     /**
      * ä¿®æ”¹æ—¶é—´
      */
-    @TableField("update_time")
+    @TableField(value = "update_time",fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
 

@@ -1,7 +1,7 @@
 package com.springcloud.product.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.springcloud.product.entity.ProductInfo;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**
  * <p>

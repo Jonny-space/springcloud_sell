@@ -9,6 +9,10 @@ mybatis-plus:
       id-type: id_worker
   mapper-locations: classpath:com/springcloud/order/mapper/*.xml
   type-aliases-package: com.springcloud.order.common.entries
+  type-enums-package: com.springcloud.common.enums
 spring:
   devtools:
     add-properties: false
+feign:
+  hystrix:
+    enabled: true

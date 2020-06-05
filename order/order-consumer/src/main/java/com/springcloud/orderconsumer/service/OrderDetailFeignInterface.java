@@ -1,7 +1,7 @@
 package com.springcloud.orderconsumer.service;
 
 import com.springcloud.order.common.service.OrderDetailInterface;
-import com.springcloud.orderconsumer.service.impl.HelloFeginFailBackImpl;
+import com.springcloud.orderconsumer.service.impl.OrderDetailFeginFailBackImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
@@ -11,6 +11,6 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @ Modified By：
  * @Version: $
  */
-@FeignClient(name = "order-provider")
+@FeignClient(name = "order-provider",fallback = OrderDetailFeginFailBackImpl.class)
 public interface OrderDetailFeignInterface extends OrderDetailInterface {
 }

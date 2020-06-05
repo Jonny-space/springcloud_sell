@@ -2,6 +2,8 @@ package com.springcloud.order.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.springcloud.common.result.BaseResult;
+import com.springcloud.common.result.ResultVO;
 import com.springcloud.order.common.entries.OrderMaster;
 import com.springcloud.order.mapper.OrderMasterMapper;
 import com.springcloud.order.service.OrderMasterService;

@@ -1,5 +1,6 @@
 package com.springcloud.order.common.entries;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -28,11 +29,11 @@ public class OrderDetail implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @TableId("detail_id")
-    private String detailId;
+    private Long detailId;
     @TableField("order_id")
-    private String orderId;
+    private Long orderId;
     @TableField("product_id")
-    private String productId;
+    private Long productId;
     /**
      * å•†å“åç§°
      */
@@ -56,12 +57,12 @@ public class OrderDetail implements Serializable {
     /**
      * åˆ›å»ºæ—¶é—´
      */
-    @TableField("create_time")
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
     private Date createTime;
     /**
      * ä¿®æ”¹æ—¶é—´
      */
-    @TableField("update_time")
+    @TableField(value = "update_time",fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
 

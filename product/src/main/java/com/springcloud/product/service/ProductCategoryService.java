@@ -1,7 +1,7 @@
 package com.springcloud.product.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.springcloud.product.entity.ProductCategory;
-import com.baomidou.mybatisplus.service.IService;
 
 import java.util.List;
 

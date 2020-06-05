@@ -1,7 +1,11 @@
 package com.springcloud.product.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.springcloud.product.common.DecreaseStockInput;
 import com.springcloud.product.entity.ProductInfo;
-import com.baomidou.mybatisplus.service.IService;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,8 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface ProductInfoService extends IService<ProductInfo> {
 
+    List<ProductInfo> findList(List<String> productIdList);
+
+    @Transactional
+    void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
 }

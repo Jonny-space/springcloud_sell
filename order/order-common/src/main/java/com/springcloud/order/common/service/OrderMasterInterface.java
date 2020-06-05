@@ -1,5 +1,6 @@
 package com.springcloud.order.common.service;
 
+import com.springcloud.common.result.BaseResult;
 import com.springcloud.order.common.entries.OrderMaster;
 import org.springframework.web.bind.annotation.GetMapping;
 

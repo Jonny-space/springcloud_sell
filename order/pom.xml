@@ -21,6 +21,9 @@
         <module>order-consumer</module>
         <module>order-common</module>
     </modules>
+    <dependencies>
+
+    </dependencies>
 
 
 </project>
