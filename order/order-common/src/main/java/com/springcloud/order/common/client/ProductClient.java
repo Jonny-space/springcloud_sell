@@ -1,7 +1,6 @@
 package com.springcloud.order.common.client;
 
 import com.springcloud.common.dto.CartDTO;
-import com.springcloud.common.result.BaseResult;
 import com.springcloud.order.common.entries.ProductInfo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;

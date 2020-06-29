@@ -9,5 +9,6 @@ spring:
           username: m13830711129_1@163.com
           password: Fengfeng0525
           default-label: master
+      name: config-server
 logging:
   file: logs/out.log

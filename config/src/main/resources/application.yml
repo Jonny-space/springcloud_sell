@@ -1,9 +1,9 @@
 server:
-  port: 20233
+  port: 33561
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:20230/eureka/
+      defaultZone: http://eureka-server:33560/eureka/
 spring:
   profiles:
     active: dev

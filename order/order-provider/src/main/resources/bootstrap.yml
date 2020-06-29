@@ -1,11 +1,11 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:20230/eureka/
+      defaultZone: http://eureka-server:20230/eureka/
 spring:
   cloud:
     config:
-      uri: http://localhost:20233
+      uri: http://config-server:20233
   application:
     name: order-provider
   devtools:
